@@ -1,0 +1,142 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    cursor:url(2.jpeg.jpg),text;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+body:before
+{
+content:'';
+position: fixed;
+z-index: -11;
+
+}
+.bg{
+    height:100%;
+    width: 100%;
+    background: url(1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-position:center;
+    background-attachment: fixed;
+}
+@keyframes duckfly
+{
+    0%
+    {
+        left: 150%;
+        top: 10%;
+    }
+    25%
+    {
+        left: 80%;
+        top: 50%;
+    }
+    50%
+    {
+        left: 50%;
+        top: 30%;
+    }
+    75%
+    {
+        left: 40%;
+        top: 30%;
+    }
+    100%
+    {
+        left: -50px;
+        top: 10%;
+    }
+}
+input + label
+{
+    position: absolute;
+    left: -100px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    display: block;
+    z-index: 5;
+    transform: translate(-50%,-50%);
+    /* background: url(hen.png) no-repeat left center; */
+    background-position: -138px 0;
+    /* background: red; */
+}
+.duck img{
+    height: 80px;
+    width: auto;
+}
+input:checked + label
+{
+opacity: 0;
+transition:0.5s;
+transform: rotate(120deg);
+transform: origion 60%;
+z-index : 5;
+}
+.duck:nth-last-of-type(1)
+{
+    animation: duckfly 10s linear 1s infinite;
+    cursor:url(6.png) , text;
+}
+    .duck:nth-last-of-type(2)
+{
+    animation: duckfly 20s linear 2s infinite;
+    cursor:url(6.png) , text;
+}
+
+    .duck:nth-last-of-type(3)
+{
+    animation: duckfly 15s linear 3s infinite;
+    cursor:url(6.png) , text;
+}
+    .duck:nth-last-of-type(4)
+{
+    animation: duckfly 17s linear 4s infinite;
+    cursor:url(6.png) , text;
+}
+    .duck:nth-last-of-type(5)
+{
+    animation: duckfly 12s linear 5s infinite;
+    cursor:url(6.png) , text;
+}
+    .duck:nth-last-of-type(6)
+{
+    animation: duckfly 16s linear 7s infinite;
+    cursor:url(6.png) , text;
+}
+.score
+{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color:#ebe5ea;
+    width: 100%;
+    z-index: index -4;
+    text-align: center;
+}
+.score:after
+{
+    content: counter(score);
+    display: inline-block;
+}
+.score:before
+{
+    content: 'score:';
+    display: inline-block;
+    margin-right: 10px;
+}
+input:checked
+{
+ counter-increment: score;   
+}
+
+
+
+
+/*loop*/
